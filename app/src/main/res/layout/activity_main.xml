@@ -5,8 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    >
+    tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
@@ -41,31 +40,31 @@
         android:id="@+id/buttonRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="50dp"
         android:text="Register Now"
-        app:layout_constraintBottom_toTopOf="@+id/buttonVisit"
-        app:layout_constraintEnd_toEndOf="@+id/buttonVisit"
-        app:layout_constraintStart_toStartOf="@+id/buttonVisit" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editMobile" />
 
     <Button
         android:id="@+id/buttonVisit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="50dp"
         android:text="Visit Us"
-        app:layout_constraintBottom_toTopOf="@+id/buttonLocate"
-        app:layout_constraintEnd_toEndOf="@+id/buttonLocate"
-        app:layout_constraintStart_toStartOf="@+id/buttonLocate" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRegister" />
 
     <Button
         android:id="@+id/buttonLocate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="120dp"
+        android:layout_marginTop="50dp"
         android:text="Locate Us"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonVisit" />
 
     <EditText
         android:id="@+id/editName"
