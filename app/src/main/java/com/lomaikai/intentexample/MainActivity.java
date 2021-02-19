@@ -70,5 +70,24 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        // Add the functionality for the local us button
+        btnLocate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Set the loation of the place to visit
+                String visitLocation = "Multimedia University, Cyberjaya";
+                // Take and create the string that will be passed as a geolocation
+                // The result of this will be a very long text
+                Uri addressUri = Uri.parse("geo:2.242665696,102.272832242?q="+visitLocation);
+                Intent intentLocateUs = new Intent(Intent.ACTION_VIEW, addressUri);
+                if (intentLocateUs.resolveActivity(getPackageManager())!=null)
+                    startActivity(intentLocateUs);
+                else {
+                    Toast.makeText(MainActivity.this, "No suitable map app available", Toast.LENGTH_SHORT).show();
+                    Log.d("ImplicitIntents", "Cannot handle");
+                }
+            }
+        });
     }
 }
