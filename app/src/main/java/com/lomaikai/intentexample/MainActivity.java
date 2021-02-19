@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         EditText editTxtName, editTxtEmail, editTxtMobile;
         Button btnRegister, btnVisit, btnLocate;
         editTxtName = findViewById(R.id.editName);
-        editTxtMobile =  findViewById(R.id.editEmail);
+        editTxtMobile =  findViewById(R.id.editMobile);
         editTxtEmail = findViewById(R.id.editEmail);
         btnLocate = findViewById(R.id.buttonLocate);
         btnRegister = findViewById(R.id.buttonRegister);
