@@ -40,7 +40,7 @@ public class SecondActivity extends AppCompatActivity {
         txtNameReceived.setText("Name: "+nameReceived);
     }
 
-    // Adding Functionality to the back button on the app bar
+    // Adding Functionality to the back button on the app bar.
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {

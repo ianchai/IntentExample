@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
                 if (intentLocateUs.resolveActivity(getPackageManager())!=null)
                     startActivity(intentLocateUs);
                 else {
-                    Toast.makeText(MainActivity.this, "No suitable map app available", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "No suitable map app available.", Toast.LENGTH_SHORT).show();
                     Log.d("ImplicitIntents", "Cannot handle");
                 }
             }
