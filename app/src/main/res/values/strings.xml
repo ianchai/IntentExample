@@ -4,4 +4,5 @@
     <string name="welcome_to_mmu">Welcome to MMU!</string>
     <string name="here_is_your_information">Here is your information:</string>
     <string name="mmu_logo">MMU Logo</string>
+    <string name="no_web_browser">No suitable app available to open web page</string>
 </resources>

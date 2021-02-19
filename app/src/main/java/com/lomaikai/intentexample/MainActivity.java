@@ -4,10 +4,13 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -47,6 +50,24 @@ public class MainActivity extends AppCompatActivity {
                 intentPage.putExtra("MOBILE",mobileInput);
                 // Start the intent activity
                 startActivity(intentPage);
+            }
+        });
+
+        // Add the functionality for the visit us button
+        btnVisit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Add intent to jump to MMU website
+                Intent intentVisit = new Intent(Intent.ACTION_VIEW);
+                intentVisit.setData(Uri.parse("https://www.mmu.edu.my"));
+                // Check if there's a package or app to handle the intent, so as not to crash the activity and load something that's not available on the device
+                if (intentVisit.resolveActivity(getPackageManager())!=null)
+                    startActivity(intentVisit);
+                else {
+                    // To catch the error, print a message to the log
+                    Toast.makeText(MainActivity.this, R.string.no_web_browser, Toast.LENGTH_SHORT).show();
+                    Log.d("ImplicitIntents", "Cannot handle");
+                }
             }
         });
     }
