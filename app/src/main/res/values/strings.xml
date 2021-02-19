@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">IntentExample</string>
     <string name="registration_form">Registration Form</string>
+    <string name="welcome_to_mmu">Welcome to MMU!</string>
+    <string name="here_is_your_information">Here is your information:</string>
+    <string name="mmu_logo">MMU Logo</string>
 </resources>
